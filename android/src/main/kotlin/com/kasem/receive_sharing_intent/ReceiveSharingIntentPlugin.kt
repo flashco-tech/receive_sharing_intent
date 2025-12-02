@@ -149,6 +149,7 @@ class ReceiveSharingIntentPlugin : FlutterPlugin, ActivityAware, MethodCallHandl
                 .put("mimeType", mType)
                 .put("thumbnail", thumbnail)
                 .put("duration", duration)
+                .put("text", text)
     }
 
     // Get video thumbnail and duration.

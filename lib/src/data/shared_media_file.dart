@@ -21,6 +21,8 @@ class SharedMediaFile {
   /// Post message iOS ONLY
   final String? message;
 
+  final String? text;
+
   SharedMediaFile({
     required this.path,
     required this.type,
@@ -28,6 +30,7 @@ class SharedMediaFile {
     this.duration,
     this.mimeType,
     this.message,
+    this.text,
   });
 
   SharedMediaFile.fromMap(Map<String, dynamic> json)
@@ -36,7 +39,8 @@ class SharedMediaFile {
         duration = json['duration'],
         type = SharedMediaType.fromValue(json['type']),
         mimeType = json['mimeType'],
-        message = json['message'];
+        message = json['message'],
+        text = json['text'];
 
   Map<String, dynamic> toMap() {
     return {
@@ -46,6 +50,7 @@ class SharedMediaFile {
       'type': type.value,
       'mimeType': mimeType,
       'message': message,
+      'text': text,
     };
   }
 }
